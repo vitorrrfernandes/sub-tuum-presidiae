@@ -1,0 +1,442 @@
+/* PALETA DE CORES:
+   --azul-marinho: #1A237E;
+   --dourado: #FFD700;
+   --azul-celeste: #42A5F5;
+   --branco: #FFFFFF;
+   --bege-claro: #F5F5DC;
+*/
+
+.logo-icon {
+    height: 30px; 
+    width: auto;
+    vertical-align: middle; 
+    margin-right: 10px;
+}
+
+html {
+    /* Define que a rolagem deve ser animada (suave) em vez de instantânea */
+    scroll-behavior: smooth;
+}
+
+/* ESTILOS GLOBAIS E RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #1A237E; /* Azul Marinho para o texto padrão */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* CLASSES DE CORES PARA TÍTULOS */
+.title-gold {
+    color: #FFD700;
+}
+.title-dark {
+    color: #1A237E;
+}
+.subtitle-light {
+    color: #FFFFFF;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+/* BOTÕES GERAIS */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-primary {
+    background-color: #FFD700;
+    color: #1A237E;
+    border: 2px solid #FFD700;
+}
+.btn-primary:hover {
+    background-color: #f7b731;
+}
+
+/* CABEÇALHO (HEADER) */
+.header {
+    background-color: #1A237E;
+    color: #FFFFFF;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+.nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+.nav li a:hover {
+    color: #FFD700;
+}
+
+/* 2. SEÇÃO PRINCIPAL (HERO/BANNER) */
+.hero {
+    /* IMPORTANTE: Use a sua imagem principal aqui (rodovia + Nossa Senhora) */
+    background: url('URL_DA_SUA_IMAGEM_PRINCIPAL.jpg') no-repeat center center/cover; 
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Sutil escurecimento para contraste */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    color: #FFFFFF;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. SOBRE O PROJETO */
+.about {
+    background-color: #F5F5DC; /* Bege Claro */
+    padding: 80px 0;
+}
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.about-text h2 {
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+.about-text p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* NOVO: ESTILOS PARA DESTAQUE DO EVENTO */
+.about-text h3 { 
+    margin-top: 30px; 
+    border-left: 5px solid #FFD700; /* Linha dourada para destaque */
+    padding-left: 10px; 
+    font-size: 1.5em;
+    color: #1A237E;
+}
+/* Estiliza o parágrafo com as informações da data/local */
+.about-text p:last-child {
+    font-size: 1.1em; 
+    font-weight: bold; 
+    color: #1A237E;
+    line-height: 1.8;
+}
+
+.about-image {
+display: flex;
+    flex-direction: row;
+    
+}
+
+.about-image img {
+    margin-left: 35px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.about-image2 {
+display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.about-image2 img {
+    margin-left: 35px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+
+/* 4. OS PONTOS DE FÉ */
+.features {
+    background-color: #1A237E; /* Azul Marinho */
+    color: #FFFFFF;
+    padding: 80px 0;
+    text-align: center;
+}
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+.feature-item {
+    background-color: rgba(255, 255, 255, 0.08); /* Fundo sutil para cada item */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+.feature-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.feature-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.feature-item h3 {
+    color: #FFD700;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.feature-item p {
+    font-size: 0.95em;
+}
+
+/* 5. CHAMADA PARA PARTICIPAÇÃO (CTA) */
+.cta {
+    background-color: #FFFFFF; 
+    padding: 80px 0;
+    text-align: center;
+}
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+.cta p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #555;
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn-cta-primary {
+    background-color: #FFD700;
+    color: #1A237E;
+    border: 2px solid #FFD700;
+}
+.btn-cta-primary:hover {
+    background-color: #f7b731;
+}
+.btn-cta-secondary {
+    background-color: #1A237E;
+    color: #FFFFFF;
+    border: 2px solid #1A237E;
+}
+.btn-cta-secondary:hover {
+    background-color: #0d123d;
+}
+.btn-cta-tertiary {
+    background-color: #42A5F5; /* Azul Celeste */
+    color: #1A237E;
+    border: 2px solid #42A5F5;
+}
+.btn-cta-tertiary:hover {
+    background-color: #1e88e5;
+}
+
+/* 6. RODAPÉ */
+.footer {
+    background-color: #1A237E;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+.footer .container {
+    display: flex;
+    justify-content: center; /* Centraliza no desktop */
+    align-items: center;
+}
+
+.pics {
+    width: 100%;
+    height: 100px;
+    width: 10px;
+}
+
+/* Estilo para a nova mensagem de convite no CTA */
+.cta-instagram-invite {
+    font-size: 1.3em !important; /* Deixa o texto do convite maior */
+    font-weight: 500;
+    color: #1A237E !important; /* Garante a cor Azul Marinho */
+    margin-bottom: 40px !important;
+}
+
+/* Estilo para o botão do Instagram (Usaremos a cor Azul Celeste, que remete a Nossa Senhora, para o botão principal) */
+.btn-instagram {
+    background-color: #42A5F5 !important; /* Azul Celeste */
+    color: #FFFFFF !important;
+    border: 2px solid #42A5F5 !important;
+    padding: 18px 35px; /* Deixa o botão mais robusto */
+    font-size: 1.1em;
+}
+
+.btn-instagram:hover {
+    background-color: #1e88e5 !important;
+    border-color: #1e88e5 !important;
+}
+
+/* Ajuste o botão cta-secondary para ter um bom espaçamento se for mantido */
+.btn-cta-secondary {
+    /* Manter estilos existentes e garantir margem */
+    margin-top: 20px;
+}
+
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+    /* Ajustes gerais de layout e cabeçalho */
+    /* Removemos a redefinição do .container aqui para evitar conflitos */
+    
+    .header .container {
+        /* Garante que o logo e a nav fiquem um abaixo do outro no cabeçalho */
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .nav ul {
+        padding-top: 10px;
+        /* Garante que a lista de navegação seja exibida */
+        display: flex; 
+        justify-content: center;
+        /* Reduz um pouco o tamanho do texto do menu para telas menores */
+        font-size: 12px; 
+    }
+    
+    /* Seção HERO */
+    .hero {
+        height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    /* Seção SOBRE/ABOUT */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Empilhamento e dimensionamento das IMAGENS NA SEÇÃO ABOUT */
+    .about-image {
+        order: -1;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .about-image img {
+        width: 80%;
+        margin-left: 0;
+        max-width: 300px;
+    }
+
+    /* Empilhamento e dimensionamento das IMAGENS NA SEÇÃO PONTOS */
+    .about-image2 {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-image2 img {
+        width: 80%;
+        margin-left: 0;
+        max-width: 350px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Seção CTA - Importante para os botões! */
+    .cta-buttons {
+        /* Garante que a visualização seja coluna */
+        flex-direction: column; 
+        gap: 15px; /* Aumentei um pouco o gap para melhor toque */
+        align-items: center; /* Centraliza os botões na tela */
+    }
+
+    /* Garante que o botão tenha a largura da tela (com padding) */
+    .cta-buttons a.btn {
+        width: 80%; 
+        max-width: 350px;
+    }
+
+    .cta-instagram-invite {
+        font-size: 1.1em !important;
+    }
+}
